@@ -1,5 +1,0 @@
-name: "群聊学习"
-author: "CMHopeSunshine (ported to AstrBot)"
-description: "学习群友们的发言、复读以及主动发言。基于 nonebot-plugin-learning-chat 移植。"
-version: "1.0.0"
-repo_url: "https://github.com/lyh2421/astrbot_plugin_learning_chat"
