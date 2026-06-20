@@ -1,0 +1,112 @@
+{
+  "total_enable": {
+    "description": "群聊学习总开关",
+    "type": "bool",
+    "default": true,
+    "hint": "关闭后所有群均不学习"
+  },
+  "KEYWORDS_SIZE": {
+    "description": "单句关键词分词数量",
+    "type": "int",
+    "default": 3,
+    "hint": "jieba 提取关键词的数量，越大匹配越精确但越慢"
+  },
+  "learn_max_count": {
+    "description": "最高学习次数",
+    "type": "int",
+    "default": 6,
+    "hint": "单条回复最多被学习多少次"
+  },
+  "cross_group_threshold": {
+    "description": "跨群回复阈值",
+    "type": "int",
+    "default": 3,
+    "hint": "跨群学习的回答至少需要被学多少次才能使用"
+  },
+  "answer_threshold": {
+    "description": "回复阈值（全局默认）",
+    "type": "int",
+    "default": 4,
+    "hint": "学会多少次后才开始回复。新建群的默认值"
+  },
+  "repeat_threshold": {
+    "description": "复读阈值（全局默认）",
+    "type": "int",
+    "default": 3,
+    "hint": "连续N条相同消息触发复读"
+  },
+  "break_probability": {
+    "description": "打断复读概率（全局默认）",
+    "type": "float",
+    "default": 0.25,
+    "hint": "复读达到阈值时有多大概率打断"
+  },
+  "speak_enable": {
+    "description": "主动发言开关（全局默认）",
+    "type": "bool",
+    "default": true,
+    "hint": "新建群默认是否开启主动发言"
+  },
+  "speak_threshold": {
+    "description": "主动发言阈值（全局默认）",
+    "type": "int",
+    "default": 5,
+    "hint": "群沉默时间超过平均消息间隔的N倍时触发主动发言"
+  },
+  "speak_min_interval": {
+    "description": "主动发言最小区间（秒）",
+    "type": "int",
+    "default": 300,
+    "hint": "两次主动发言之间的最小间隔"
+  },
+  "speak_continuously_probability": {
+    "description": "连续主动发言概率",
+    "type": "float",
+    "default": 0.5,
+    "hint": "发出第一句后继续发下一句的概率"
+  },
+  "speak_continuously_max_len": {
+    "description": "最大连续主动发言句数",
+    "type": "int",
+    "default": 3,
+    "hint": "一次最多连续说几句"
+  },
+  "speak_poke_probability": {
+    "description": "戳一戳概率",
+    "type": "float",
+    "default": 0.5,
+    "hint": "主动发言附带戳一戳的概率（需平台支持）"
+  },
+  "ban_words": {
+    "description": "全局屏蔽词",
+    "type": "text",
+    "default": "[]",
+    "editor_mode": true,
+    "editor_language": "json",
+    "hint": "包含这些词的消息不会被学习，JSON 数组格式，如 [\"广告\",\"链接\"]"
+  },
+  "ban_users": {
+    "description": "全局屏蔽用户",
+    "type": "text",
+    "default": "[]",
+    "editor_mode": true,
+    "editor_language": "json",
+    "hint": "这些用户的消息不会被学习，JSON 数组格式，如 [\"123456\",\"789012\"]"
+  },
+  "dictionary": {
+    "description": "自定义词典",
+    "type": "text",
+    "default": "[]",
+    "editor_mode": true,
+    "editor_language": "json",
+    "hint": "jieba 自定义词典词列表，JSON 数组格式，如 [\"原神\",\"崩铁\"]"
+  },
+  "group_configs": {
+    "description": "分群配置（高级）",
+    "type": "text",
+    "default": "{}",
+    "editor_mode": true,
+    "editor_language": "json",
+    "hint": "按群 ID 设置参数。格式: {\"群号\": {\"enable\": true, \"repeat_threshold\": 3, ...}}。日常建议用 /学说话 /闭嘴 指令控制"
+  }
+}
